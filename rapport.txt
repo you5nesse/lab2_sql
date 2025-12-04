@@ -1,0 +1,8 @@
+Les contraintes  jouent un rôle essentiel pour garantir la cohérence et la prévention des anomalies:
+- la clé primaires (PRIMARY KEY) est un identifiant unique de chaque enregistrement, pour isoler les donnes et  évite la duplication comme  (id)dans les tables auteur, ouvrage, abonné et emprunt.
+-les clés étrangères(FOREIGN KEY) comme  ouvrage_id et abonne_id dans emprunt, garanti l’intégrité référentielle et les actions asaociées Elles empêchent l’insertion d’un ouvrage lié à un auteur inexistant ou la création d’un emprunt associé à un abonné non enregistré.
+-Les contraintes de cardinalité (1-n) jouent un rôle deb  définie claire la structure logique des relations, par exemple:un auteur(1) peut écrire plusieurs ouvrages(n), un abonné(1) peut faire plusieurs emprunts(n), Cela  assure une modélisation correcte du monde réel.
+-La contrainte NOT NULL empêche la valeur null et obligatoire dans un enregistrement comme (nom,abonne_id..) .
+-UNIQUE: garantit l'unicité d'une information dans un colonne et  empêche la duplication d’une même valeur dans un colonne, comme un email ici est unique pour une seule abonne.
+-La contrainte CHECK permet de contrôler que une valeur respecte une condition ,donc ici on verifier si date _fin est NULL ou supérieur à date_debut.
+-La contrainte DEFAULT permet de définir une valeur par défaut pour une colonne lorsqu’aucune valeur n’est fournie comme ici on prend une valeur par défaut à date_debut.
